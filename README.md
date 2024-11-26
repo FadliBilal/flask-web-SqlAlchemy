@@ -1,12 +1,12 @@
-# Aplikasi Web Flask Sederhana
+#  Web Flask No Database
 
-Aplikasi web sederhana menggunakan **Flask**.
+Web sederhana menggunakan Framework Python **Flask**.
 
 ## Prasyarat
 
 Sebelum menjalankan aplikasi, pastikan Anda sudah menginstal:
 
-- **Python 3**: Anda dapat mengunduhnya dari [python.org](https://www.python.org/downloads/).
+- **Python 3**: Anda dapat mengunduhnya dari [python.org](https://www.python.org/downloads/). //disini saya menggunakan versi 3.12
 - **pip**: Biasanya sudah terinstal bersama Python. Untuk memastikan, jalankan perintah berikut:
   
   ```bash
@@ -21,8 +21,8 @@ Ikuti langkah-langkah berikut untuk menjalankan aplikasi ini di komputer Anda.
 Clone proyek ini ke dalam folder lokal Anda dengan perintah:
 
 ```bash
-git clone <URL_REPOSITORY>
-cd <nama_folder_repositori>
+git clone https://github.com/FadliBilal/flask-web-noDB.git
+cd flask-web-noDB
 ```
 
 ### 2. Setup Virtual Environment (Opsional)
@@ -33,32 +33,32 @@ Untuk membuat dan mengaktifkan virtual environment:
 - **Linux/macOS**:
 
   ```bash
-  python3 -m venv venv
-  source venv/bin/activate
+  python3 -m venv my_venv //virtual environtment terinstall dengan nama my_venv
+  source venv/bin/activate //setelah active maka install flasknya
   ```
 
 - **Windows**:
 
   ```bash
-  python -m venv venv
-  venv\Scripts\activate
+  python -m venv venv //virtual environtment terinstall dengan nama my_venv
+  venv\Scripts\activate //setelah active maka install flasknya
   ```
 
 ### 3. Install Dependensi
 Setelah virtual environment aktif, instal semua dependensi yang dibutuhkan oleh proyek:
 
 ```bash
-pip install -r requirements.txt
+pip install flask
 ```
 
 ### 4. Jalankan Aplikasi
 Setelah dependensi terinstal, jalankan aplikasi Flask dengan perintah berikut:
 
 ```bash
-python app.py
+python app.py atau flask run
 ```
 
-Aplikasi Flask akan berjalan di alamat [http://127.0.0.1:5000/](http://127.0.0.1:5000/).
+Flask akan berjalan di alamat [http://127.0.0.1:5000/](http://127.0.0.1:5000/).
 
 ## Struktur Proyek
 
@@ -66,20 +66,8 @@ Berikut adalah struktur folder dan file dalam proyek ini:
 
 ```bash
 .
-├── app.py            # Aplikasi utama Flask
-├── requirements.txt  # Daftar dependensi Python
+├── app.py            # Aplikasi utama Flask / biasa disebut controller nya
+├── my_venv           # virtual environtment / install sesuai yang dibutuhkan untuk web ini hanya flask
 ├── templates/        # Folder untuk template HTML
 └── static/           # Folder untuk file statis (CSS, JS, gambar)
 ```
-
-### Penjelasan File dan Folder
-
-- **app.py**: File utama untuk menjalankan aplikasi Flask.
-- **requirements.txt**: Berisi daftar semua dependensi Python yang dibutuhkan untuk menjalankan aplikasi.
-- **templates/**: Berisi file HTML yang digunakan untuk rendering halaman.
-- **static/**: Digunakan untuk menyimpan file statis seperti gambar, CSS, dan JavaScript.
-
-## Catatan
-
-- Jika Anda menggunakan virtual environment, pastikan untuk mengaktifkannya setiap kali Anda bekerja dengan proyek ini.
-- Jangan lupa untuk menambahkan file atau folder yang diperlukan ke dalam direktori **static/** dan **templates/** untuk pengembangan lebih lanjut.

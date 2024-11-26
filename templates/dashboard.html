@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Diri</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+
+    {% include 'header.html' %}
+    
+        <div class="container mt-5 pt-4">
+        <div class="card">
+            <div class="card-header text-center">
+                <h4>Data Diri Mahasiswa</h4>
+            </div>
+            <div class="card-body">
+                <ul class="list-group">
+                    <li class="list-group-item">
+                        <div class="row">
+                            <div class="col-3 text-left">
+                                <strong>Nama</strong>
+                            </div>
+                            <div class="col-6">: {{ nama }}</div>
+                        </div>
+                    </li>
+                    <li class="list-group-item">
+                        <div class="row">
+                            <div class="col-3 text-left">
+                                <strong>NIM</strong>
+                            </div>
+                            <div class="col-6">: {{ nim }}</div>
+                        </div>
+                    </li>
+                    <li class="list-group-item">
+                        <div class="row">
+                            <div class="col-3 text-left">
+                                <strong>Jurusan</strong>
+                            </div>
+                            <div class="col-6">: {{ jurusan }}</div>
+                        </div>
+                    </li>
+                    <li class="list-group-item">
+                        <div class="row">
+                            <div class="col-3 text-left">
+                                <strong>Email</strong>
+                            </div>
+                            <div class="col-6">: {{ email }}@gmail.com</div>
+                        </div>
+                    </li>
+                    <li class="list-group-item">
+                        <div class="row">
+                            <div class="col-3 text-left">
+                                <strong>Tanggal Lahir</strong>
+                            </div>
+                            <div class="col-6">: {{ tanggallahir }}</div>
+                        </div>
+                    </li>
+                    <li class="list-group-item">
+                        <div class="row">
+                            <div class="col-3 text-left">
+                                <strong>Tempat Tinggal</strong>
+                            </div>
+                            <div class="col-6">: {{ tempattinggal }}</div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

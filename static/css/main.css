@@ -1,0 +1,146 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f4f7fc;
+    margin: 0;
+    padding: 0;
+}
+
+.wrapper {
+    display: flex;
+    height: 100vh;
+    overflow: hidden;
+}
+
+#sidebar {
+    width: 250px;
+    background-color: #3e4a89;
+    color: #fff;
+    padding-top: 20px;
+    position: fixed;
+    height: 100vh;
+    transition: all 0.3s ease;
+    z-index: 2;
+}
+
+#sidebar .sidebar-header {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 15px;
+}
+
+#sidebar .sidebar-header i {
+    font-size: 2rem;
+    margin-right: 15px;
+}
+
+#sidebar .sidebar-header span {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+#sidebar ul.components {
+    list-style: none;
+    padding-left: 0;
+}
+
+#sidebar ul li {
+    margin: 10px 0;
+}
+
+#sidebar ul li a {
+    display: flex;
+    align-items: center;
+    color: #fff;
+    font-size: 1.2rem;
+    padding: 12px 15px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+#sidebar ul li a:hover {
+    background-color: #5765b8;
+    color: #f0f0f0;
+}
+
+#sidebar ul li a i {
+    font-size: 1.5rem;
+    margin-right: 15px;
+}
+
+#content {
+    margin-left: 250px;
+    padding: 20px;
+    flex-grow: 1;
+}
+
+.navbar {
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 10px 20px;
+    position: fixed;
+    top: 0;
+    left: 250px;
+    width: calc(100% - 250px);
+    z-index: 10;
+}
+
+.navbar .navbar-text {
+    flex-grow: 1;
+}
+
+.navbar .navbar-brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.navbar .navbar-toggler {
+    border: none;
+}
+
+.navbar .navbar-nav .nav-item .btn {
+    font-size: 1rem;
+    padding: 8px 16px;
+    border-radius: 5px;
+    margin-left: 10px;
+}
+
+.navbar .navbar-nav .nav-item .btn:hover {
+    background-color: #f44336;
+    color: #fff;
+}
+
+.navbar .navbar-nav .nav-item .btn i {
+    margin-right: 8px;
+}
+
+@media (max-width: 768px) {
+    #sidebar {
+        width: 0;
+    }
+
+    #sidebar.active {
+        width: 250px;
+    }
+
+    #content {
+        margin-left: 0;
+    }
+
+    .navbar {
+        left: 0;
+        width: 100%;
+    }
+}
+
+@media (max-width: 576px) {
+    .navbar .navbar-text {
+        font-size: 1rem;
+    }
+
+    .navbar .btn {
+        font-size: 0.9rem;
+    }
+}

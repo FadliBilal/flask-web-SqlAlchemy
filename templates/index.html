@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,83 +8,98 @@
     <link rel="stylesheet" href="static/css/data.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 </head>
+
 <body>
 
-<div class="jumbotron text-center">
-    <h2>Isi Data Dibawah ini!</h2>
-    <p>Formulir pendaftaran untuk mengisi data mahasiswa</p>
-</div>
-    
-
-<div class="card mb-5" style="max-width: 1300px; margin: auto;">
-    <div class="card-header text-center">
-        <h4>Formulir Data Mahasiswa</h4>
+    <div class="jumbotron text-center">
+        <h2>Isi Data Dibawah ini!</h2>
+        <p>Formulir pendaftaran untuk mengisi data mahasiswa</p>
     </div>
-    <div class="card-body">
-        <form method="POST" class="register-form" id="login-form" action="/">
-            <div class="row">
-                <div class="col-md-4 form-group">
-                    <label for="nama">Nama</label>
-                    <input type="text" class="form-control" name="nama" id="nama" placeholder="Masukkan Nama" required>
-                </div>
-                <div class="col-md-4 form-group">
-                    <label for="nim">NIM</label>
-                    <input type="text" class="form-control" name="nim" id="nim" placeholder="Masukkan NIM" required>
-                </div>
-                <div class="col-md-4 form-group">
-                    <label for="jurusan">Jurusan</label>
-                    <input type="text" class="form-control" name="jurusan" id="jurusan" placeholder="Masukkan Jurusan" required>
-                </div>
-            </div>
 
-            <div class="row">
-                <div class="col-md-4 form-group">
-                    <label for="email">Email</label>
-                    <div class="input-group mb-3">
-                        <input type="text" class="form-control" placeholder="Masukkan Email" name="email" id="email" required>
-                        <div class="input-group-append">
-                            <span class="input-group-text" id="basic-addon2">@gmail.com</span>
+    <div class="card mb-5" style="max-width: 1300px; margin: auto;">
+        <div class="card-header text-center">
+            <h4>Formulir Data Mahasiswa</h4>
+        </div>
+        <div class="card-body">
+            <form method="POST" class="register-form" id="login-form" action="/">
+                <div class="row">
+                    <div class="col-md-4 form-group">
+                        <label for="nama">Nama</label>
+                        <input type="text" class="form-control" name="nama" id="nama" placeholder="Masukkan Nama"
+                            required>
+                    </div>
+                    <div class="col-md-4 form-group">
+                        <label for="nim">NIM</label>
+                        <input type="text" class="form-control" name="nim" id="nim" placeholder="Masukkan NIM" required>
+                    </div>
+                    <div class="col-md-4 form-group">
+                        <label for="jurusan">Jurusan</label>
+                        <input type="text" class="form-control" name="jurusan" id="jurusan"
+                            placeholder="Masukkan Jurusan" required>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-4 form-group">
+                        <label for="email">Email</label>
+                        <div class="input-group mb-3">
+                            <input type="text" class="form-control" placeholder="Masukkan Email" name="email" id="email"
+                                required>
+                            <div class="input-group-append">
+                                <span class="input-group-text" id="basic-addon2">@gmail.com</span>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-md-4 form-group">
-                    <label for="tempattinggal">Tempat Tinggal</label>
-                    <div class="input-group mb-3">
-                        <input type="text" class="form-control" placeholder="Masukkan tempat tinggal" name="tempattinggal" id="tempattinggal" required>
+                    <div class="col-md-4 form-group">
+                        <label for="tempattinggal">Tempat Tinggal</label>
+                        <div class="input-group mb-3">
+                            <input type="text" class="form-control" placeholder="Masukkan tempat tinggal"
+                                name="tempattinggal" id="tempattinggal" required>
+                        </div>
+                    </div>
+                    <div class="col-md-4 form-group">
+                        <label for="tanggallahir">Tanggal Lahir</label>
+                        <input type="date" class="form-control" name="tanggallahir" id="tanggallahir" required>
                     </div>
                 </div>
-                <div class="col-md-4 form-group">
-                    <label for="tanggallahir">Tanggal Lahir</label>
-                    <input type="date" class="form-control" name="tanggallahir" id="tanggallahir" required>
-                </div>
-            </div>
 
-            <div class="row">
-                <div class="col-md-4 form-group">
-                    <label for="kode">Kode</label>
-                    <input type="text" class="form-control" name="kode" id="kode" placeholder="Masukkan Kode" required>
+                <div class="row">
+                    <div class="col-md-4 form-group">
+                        <label for="kode">Kode</label>
+                        <input type="text" class="form-control" name="kode" id="kode" placeholder="Masukkan Kode"
+                            required>
+                    </div>
+                    <div class="col-md-4 form-group">
+                        <label for="matkul">Matkul</label>
+                        <input type="text" class="form-control" name="matkul" id="matkul" placeholder="Masukkan Matkul"
+                            required>
+                    </div>
+                    <div class="col-md-2 form-group">
+                        <label for="sks">SKS</label>
+                        <input type="number" class="form-control" name="sks" id="sks" placeholder="Masukkan SKS"
+                            required>
+                    </div>
+                    <div class="col-md-2 form-group">
+                        <label for="nilai">Nilai</label>
+                        <input type="number" class="form-control" name="nilai" id="nilai" placeholder="Masukkan Nilai"
+                            required>
+                    </div>
                 </div>
-                <div class="col-md-4 form-group">
-                    <label for="matkul">Matkul</label>
-                    <input type="text" class="form-control" name="matkul" id="matkul" placeholder="Masukkan Matkul" required>
+
+                <div class="form-buttons">
+                    <button type="reset" class="btn btn-secondary btn-custom">Clear Form</button>
+                    <button type="submit" name="daftar" id="daftar" class="btn btn-primary btn-custom">Masuk</button>
                 </div>
-                <div class="col-md-2 form-group">
-                    <label for="sks">SKS</label>
-                    <input type="number" class="form-control" name="sks" id="sks" placeholder="Masukkan SKS" required>
-                </div>
-                <div class="col-md-2 form-group">
-                    <label for="nilai">Nilai</label>
-                    <input type="number" class="form-control" name="nilai" id="nilai" placeholder="Masukkan Nilai" required>
-                </div>
-            <button type="submit" name="daftar" id="daftar" class="btn btn-primary btn-block">Masuk</button>
-        </form>
+            </form>
+        </div>
     </div>
-</div>
 
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
 </body>
+
 </html>

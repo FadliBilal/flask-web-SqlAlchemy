@@ -1,12 +1,26 @@
 body {
     background-color: #f4f4f4;
-    font-family: 'Arial', sans-serif;
+    font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
+    background: linear-gradient(45deg, #75caff, #92ffe6, #d1e8f2, #758eff);
+    background-size: 400% 400%;
+    animation: gradientBackground 10s ease infinite;
+}
+
+@keyframes gradientBackground {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
 }
 
 .jumbotron {
-    color: rgb(117, 117, 117);
     padding: 2rem;
     border-radius: 10px;
     margin-bottom: 20px;
@@ -26,6 +40,7 @@ body {
     gap: 10px; 
     padding-top: 20px; 
 }
+
 .btn-custom {
     width: auto;
     padding: 10px 20px;
@@ -38,11 +53,10 @@ body {
     border-radius: 10px;
     border: 1px solid #ddd;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
 }
 
 .card-header {
-    background-color: #007bff;
-    color: rgb(0, 123, 255);
     padding: 1rem;
     border-radius: 10px 10px 0 0;
 }

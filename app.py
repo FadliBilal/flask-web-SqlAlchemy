@@ -14,15 +14,17 @@ def index():
         session['tanggallahir'] = request.form.get('tanggallahir')
         session['kode'] = request.form.get('kode')
         session['matkul'] = request.form.get('matkul')
+        
         nilai = request.form.get('nilai', type=float)
         sks = request.form.get('sks', type=int)
 
-        if nilai and sks:
+        if nilai is not None and sks is not None and sks > 0:
             session['nilai'] = nilai
             session['sks'] = sks
-            session['ipk'] = 25 / (nilai * sks)  
+            session['ipk'] = (nilai * sks) / 7  
         else:
             session['ipk'] = None  
+        
         return redirect(url_for('dashboard'))
 
     return render_template('index.html')
@@ -62,11 +64,16 @@ def nilai():
 @app.route('/laporan')
 def laporan():
     if 'nama' in session:
+        if session['ipk'] is not None:
+            status = 'Aktif' if session['ipk'] >= 2 else 'Non Aktif'
+        else:
+            status = 'None'  
         return render_template('laporan.html',
                                nama=session['nama'],
                                nim=session['nim'],
                                ipk=session['ipk'],
-                               sks=session['sks'])
+                               sks=session['sks'],
+                               status=status)  
     return redirect(url_for('index'))
 
 @app.route('/logout')

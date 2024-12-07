@@ -1,7 +1,7 @@
 from flask import Flask, render_template, request, redirect, session, url_for
 
 app = Flask(__name__)
-app.secret_key = 'flaskkey'
+app.secret_key = 'hendra'
 
 @app.route('/', methods=['GET', 'POST'])
 def index():

@@ -3,42 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Data Diri</title>
+    <title>Kartu Rencana Studi (KRS)</title>
+    <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Google Fonts - Poppins -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
 
+    <!-- Include Header -->
     {% include 'header.html' %}
 
-    <div class="container mt-5 pt-4">
-        <div class="card">
-            <div class="card-header text-center">
-                <h4>Kartu Rencana Studi (KRS)</h4>
-            </div>
-            <div class="card-body">
-                <h5 class="card-title text-center">Informasi Mata Kuliah</h5>
-                <table class="table table-striped">
-                    <thead>
-                        <tr>
-                            <th scope="col">Kode</th>
-                            <th scope="col">Mata Kuliah</th>
-                            <th scope="col">SKS</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <th scope="row">{{ kode }}</th>
-                            <td>{{ matkul }}</td>
-                            <td>{{ sks }}</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </div>
+    <div class="container mt-5">
+        <h2>Kartu Rencana Studi (KRS)</h2>
+
+        <!-- Table to Display Courses -->
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Kode Mata Kuliah</th>
+                    <th>Nama Mata Kuliah</th>
+                    <th>SKS</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for matkul in mata_kuliah %}
+                <tr>
+                    <td>{{ matkul.kode_matkul }}</td>
+                    <td>{{ matkul.nama_matkul }}</td>
+                    <td>{{ matkul.sks }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
     </div>
 
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <!-- Bootstrap JS, Popper.js, and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
